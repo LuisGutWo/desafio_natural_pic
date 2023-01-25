@@ -6,7 +6,7 @@ import { Card } from "react-bootstrap";
 import { useFavoritesContext } from "../context/FavoritesContext";
 
 const MainCards = ({ info, selectFavorites }) => {
-  const { addFavorites, removeFavorites } = useFavoritesContext();
+  const { favorites, addFavorites, removeFavorites } = useFavoritesContext();
 
   return (
     <Card style={{ width: "14rem", border: 0 }}>
@@ -27,6 +27,7 @@ const MainCards = ({ info, selectFavorites }) => {
           </Button>
         ) : (
           <Button
+            disabled={favorites.some((img) => img.id == info.id)}
             onClick={() => {
               addFavorites(info);
             }}
@@ -36,7 +37,7 @@ const MainCards = ({ info, selectFavorites }) => {
             sx={{ padding: 0.5 }}
             endIcon={<SendIcon />}
           >
-            Agregar a Favoritos
+            Add Likes
           </Button>
         )}
       </Card.ImgOverlay>
