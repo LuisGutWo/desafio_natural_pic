@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  background-color: #b4b4b4;
+}
+
+.App {
+  font-family: "Roboto", serif;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 0;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: 100%;
+  height: 100%;
+  padding: 16px;
+  margin: 0;
+  text-align: start;
+}
+
+.card-title {
+}
+.card-title:hover {
+  background-color: #3e3e3e61;
+  border-radius: 5px;
+  opacity: 0.8;
+  padding: 4px;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
